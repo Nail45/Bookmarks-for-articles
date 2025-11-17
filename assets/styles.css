@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Основные настройки шрифта и фона */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: linear-gradient(to bottom right, #eafdfd, #cffcfb); /* Градиент фона */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center; /* Центрирование содержимого */
+}
+
+/* Логотип и заголовок */
+header {
+    position: relative;
+    z-index: 1;
+    background-color: #3b5998; /* Темно-голубой фон */
+    color: white; /* Белый цвет текста */
+    text-align: center;
+    padding: 1em 0;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: white; /* Белый цвет текста */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопки регистрации и входа */
+nav a {
+    display: inline-block;
+    color: white; /* Белые буквы */
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+    transition: all 0.3s ease-in-out;
+    margin-right: 10px;
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.5);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Немного увеличенная яркость */
+    transform: scale(1.05);
+    box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+}
+
+/* Контейнер основного содержимого */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 960px;
+}
+
+/* Описание сервиса */
+.description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+/* Список возможностей */
+.features ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 2em;
+    margin-top: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.features li::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #3b5998;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Призыв к действию */
+.cta-button {
+    display: block;
+    background-color: #3b5998;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2em;
+}
+
+.cta-button:hover {
+    background-color: #2e487d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+    color: red;
+    margin-bottom: 5px;
+    text-align: center;
+}

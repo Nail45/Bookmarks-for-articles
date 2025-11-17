@@ -1,0 +1,80 @@
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* автоматический, растянутая основная зона, автоматический */
+    min-height: 100vh; /* минимум полная высота экрана */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.wrap-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.action-link {
+    text-decoration: none;
+}
+
+.delete {
+    color: red;
+}
+
+.read {
+    color: green;
+}
+
+.unread {
+    color: orange;
+}
+
+.articles-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.articles-table th, .articles-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.articles-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.articles-table thead th {
+    background-color: #3b5998;
+    color: white;
+}
+
+.actions a {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.actions a:hover {
+    background-color: #2e487d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
