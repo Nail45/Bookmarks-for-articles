@@ -4,17 +4,15 @@ session_start();
 
 require_once './connect.php';
 
-
 if (!empty($_SESSION['auth'])) {
-
     try {
         $stmt = $pdo->prepare('DELETE FROM articles WHERE user_id = :user_id and id = :id');
 
         $stmt->bindValue(':user_id', $_SESSION['id'], PDO::PARAM_INT);
-        $stmt->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
+        $stmt->bindValue(':id', $_POST['id'], PDO::PARAM_INT);
         $stmt->execute();
 
-        header('Location:/' . $path);
+        header('Location:/' . $action);
         die();
     } catch (PDOException $e) {
         echo 'Error: ' . $e->getMessage();

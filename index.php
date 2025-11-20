@@ -26,13 +26,13 @@ if (preg_match('#^/unread$#', $url)) {
     include './views/unread.php';
 }
 
-if (preg_match('#^/([A-Za-z]+)/(delete)\?id=(\d+)$#', $url, $match)) {
-    $path = $match[1];
+if (preg_match('#^/(read|unread)/(delete)$#', $url, $match)) {
+    $action = $match[1];
     include './controllers/delete.php';
 }
 
-if (preg_match('#^/([A-Za-z]+)/(checked)\?id=(\d+)$#', $url, $match)) {
-    $path = $match[1];
+if (preg_match('#^/(read|unread)/(checked)$#', $url, $match)) {
+    $action = $match[1];
     include './controllers/checked.php';
 }
 

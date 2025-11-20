@@ -40,12 +40,20 @@
                     <tr>
                         <td><strong><?php echo $article['title'] ?></strong></td>
                         <td><?php echo $article['description'] ?></td>
-                        <td><a target="_blank" class="action-link" href="<?php echo $article['link'] ?>">Перейти</a></td>
+                        <td><a target="_blank" class="action-link" href="<?php echo $article['link'] ?>">Перейти</a>
+                        </td>
                         <td class="wrap-link">
                             <a class="action-link" href="/edit/<?php echo $article['id'] ?>">Редактировать</a>
-                            <a class="action-link delete" href="/unread/delete?id=<?php echo $article['id'] ?>">Удалить</a>
-                            <a class="action-link read" href="/unread/checked?id=<?php echo $article['id'] ?>">Отметить как
-                                прочитанная</a>
+                            <form action="/unread/delete" method="post">
+                                <input type="hidden" name="id" value="<?php echo $article['id'] ?>">
+                                <input class="action-link delete" type="submit" name="delete" value="Удалить">
+
+                            </form>
+                            <form action="/unread/checked" method="post">
+                                <input type="hidden" name="id" value="<?php echo $article['id'] ?>">
+                                <input class="action-link unread" type="submit" name="delete"
+                                       value="Отметить как Прочитанная">
+                            </form>
                         </td>
                     </tr>
                 <?php } ?>

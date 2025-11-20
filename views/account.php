@@ -1,5 +1,6 @@
 <?php
-if ($_SESSION['auth']) { ?>
+if ($_SESSION['auth'] and $id == $_SESSION['id']) {
+    ?>
 
     <!DOCTYPE html>
     <html lang="ru">
